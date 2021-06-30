@@ -23,8 +23,8 @@ def name_loc():
 nm_loc = name_loc()
 
 
-def rides_locations(station_csv, names_location):  # Return location of all rides (both ways as one)
-    file = pd.read_csv(station_csv, encoding='cp1250')
+def rides_locations(http_stations, names_location):  # Return location of all rides (both ways as one)
+    file = pd.read_csv(http_stations, encoding='cp1250')
     file_nan = file.dropna()
     all_stat = list(zip(file_nan['Stacja wynajmu'], file_nan['Stacja zwrotu']))
     rnt_ret = []
